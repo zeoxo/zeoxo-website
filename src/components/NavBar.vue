@@ -8,19 +8,19 @@
 
       <!-- if on desktop -->
         <div class="linksDesktop" v-if="window.width > 600">
-            <a href="">About</a>
-            <a href="">Projects</a>
-            <a href="">Links</a>
+            <a @click="scrollToAbout">About</a>
+            <a @click="scrollToSkills">Skills</a>
+            <a @click="scrollToProjects">Projects</a>
             <div class="vl"></div>
-            <a href="">Contact</a>
+            <a @click="scrollToContact">Contact</a>
         </div>
 
         <!-- mobile -->
         <div class="linksMobile" v-if="window.width < 600">
-            <a href="">About</a>
-            <a href="">Projects</a>
-            <a href="">Links</a>
-            <a href="">Contact</a>
+           <a @click="scrollToAbout">About</a>
+            <a @click="scrollToSkills">Skills</a>
+            <a @click="scrollToProjects">Projects</a>
+            <a @click="scrollToContact">Contact</a>
         </div>
     </div>
 
@@ -30,7 +30,7 @@
 
 
 <script>
-
+var scrollToElement = require('scroll-to-element');
 export default {
   name: 'NavBar',
   components: {
@@ -43,7 +43,7 @@ data(){
       height: 0
     }
   }
-},
+},  
   created(){
   // const self = this;
     window.addEventListener('resize', this.handleResize)
@@ -57,6 +57,19 @@ data(){
       this.window.width = window.innerWidth;
       this.window.height = window.innerHeight;
     },
+    scrollToAbout(){
+      scrollToElement('#about');
+    },
+    scrollToSkills(){
+      scrollToElement('#skills');
+    },
+    scrollToProjects(){
+      scrollToElement('#projects');
+    },
+    scrollToContact(){
+      scrollToElement('#contact');
+    }
+
   }
 
 }
@@ -87,6 +100,7 @@ data(){
     // flex-wrap: nowrap;
     align-items: center;
     a{
+      cursor: pointer;
       white-space:nowrap;
       padding-left: 15px;
       padding-right: 15px;
@@ -106,6 +120,7 @@ data(){
     flex-direction: column;
     align-items: left;
     a{
+      cursor: pointer;
       white-space:nowrap;
       padding-left: 15px;
       text-align: left;

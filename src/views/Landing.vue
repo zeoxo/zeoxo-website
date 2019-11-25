@@ -1,14 +1,30 @@
 <template>
   <div class="main">
     <div class="intro">
-      <p class="header1 med-light">Hello World...</p>
+      <p class="header1 med-light">Hello World;</p>
       <div style="vertical-align:middle; padding-top: 10px;">
         <p class="header1 light" style="display: inline;  font-size: 650%;">I am </p>
         <p class="titleText primary" style="display:inline; font-size: 500%;">zeoxo</p>  
       </div>
-      <p class="bodyText light">-  Game Developer</p>
-      <p class="bodyText light">-  Web Developer</p>
-      <p class="bodyText light">-  Graphic Designer</p>
+      <div class="bodyText light" style="padding: 0; margin: 10px;">
+
+        <div v-if="subTextIndex == 0">
+          Game 
+          <p class="bodyText primary" style="display: inline;">Developer</p>
+        </div>
+
+        <div v-if="subTextIndex == 1">
+          Web 
+          <p class="bodyText primary" style="display: inline;">Developer</p>
+        </div>        
+        <div v-if="subTextIndex == 2">
+          Graphic
+          <p class="bodyText primary" style="display: inline;">Designer</p>
+        </div>
+      
+      
+      
+      </div>
       <div class="socialLinks" style="padding-top: 60px;">
           <a href="https://twitter.com/zeoxo">
             <img src="../assets/svg/twitter.svg" alt="twitter">
@@ -23,15 +39,13 @@
             <img src="../assets/svg/itch.svg" alt="itch">
           </a>
         </div>
-        <button @click="scrollToAbout"> Learn More</button>
-      
-      
+        <button @click="scrollToAbout"> &#9660; Learn More  &#9660;</button>
     </div>
     
 
 
     <!-- ABOUT -->
-    <div class="aboutContainer">
+    <div class="aboutContainer" id="about">
     <div class="about" id="about">
       <p class="titleText primary">&lt; About &gt;</p>
       <p class="header1 dark" style="padding-top: 50px">Hello World</p>
@@ -44,7 +58,7 @@
   
       </div>
     </div>
-      <div class="titleText primary" style="padding-top: 50px;">Skills</div>
+      <div class="titleText primary" id="skills" style="padding-top: 50px;">&lt; Skills &gt;</div>
       <div class="skills" style= "width: 65%; margin: 0 auto;">
         <div class="code" style="text-align: left;">
           <p class="header1 dark">Coding</p>
@@ -62,7 +76,7 @@
 
 
     <!-- PROJECTS -->
-    <div class="projects">
+    <div class="projects" id="projects">
       <p class="titleText primary " style="padding-top: 50px;">&lt; Projects &gt;</p>
       <p class="bodyText light" style="padding-bottom: 50px;">Along with web development, I also like to dedicate my time to small projects such as games, art, or applications.</p>
       <div class="projectCards">
@@ -77,22 +91,28 @@
     </div>
     
     <!-- CONTACT  -->
-    <p class="titleText primary contact-container">&lt; Contact &gt;</p>
+    <p class="titleText primary contact-container" id="contact">&lt; Contact &gt;</p>
     <div class="contact">
-      <div class="email">
-        <img src="../assets/svg/email.svg" alt="email" class="emailSVG">
-        <p class="header1 dark" style="padding-top: 20%;">Email</p>
-        <a href="mailto: dyldougherty@gmail.com">
-          <p class="bodyText primary">dyldougherty@gmail.com</p>
-        </a>
+      <div class="form">
+        <ContactForm/>
       </div>
-      <div class="location">
-        <img src="../assets/svg/location.svg" alt="location" class="locationSVG">
-        <p class="header1 dark" style="padding-top: 20%;">Location</p>
-        <a href="https://www.google.com/maps?q=philadelphia+pennsylvania&rlz=1C1GCEA_enUS851US851&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjbwJe6goXmAhXpY98KHZc-B2AQ_AUoAXoECBgQAw">
-          <p class="bodyText primary">Phildadelphia, Pennsylvania</p>
-        </a>
+      <div class="icons">
+        <div class="email">
+          <img src="../assets/svg/email.svg" alt="email" class="emailSVG">
+          <p class="header1 dark" style="padding-top: 20%;">Email</p>
+          <a href="mailto: dyldougherty@gmail.com">
+            <p class="bodyText primary">dyldougherty@gmail.com</p>
+          </a>
+        </div>
+        <div class="location">
+          <img src="../assets/svg/location.svg" alt="location" class="locationSVG">
+          <p class="header1 dark" style="padding-top: 20%;">Location</p>
+          <a href="https://www.google.com/maps?q=philadelphia+pennsylvania&rlz=1C1GCEA_enUS851US851&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjbwJe6goXmAhXpY98KHZc-B2AQ_AUoAXoECBgQAw">
+            <p class="bodyText primary">Phildadelphia, Pennsylvania</p>
+          </a>
+        </div>
       </div>
+
     </div>
 
   <!-- <p>Icons from https://icons8.com/</p> -->
@@ -123,16 +143,35 @@
 </template>
 
 <script>
-import ProjectCard from "../components/ProjectCard.vue"
+import ProjectCard from "../components/ProjectCard.vue";
+import ContactForm from "../components/ContactForm.vue"
 var scrollToElement = require('scroll-to-element');
 export default {
   name: 'Landing',
+  data(){
+    return{
+      subTextIndex: 0
+    }
+  },
   components: {
-    ProjectCard
+    ProjectCard,
+    ContactForm
+  },
+  mounted(){
+    setInterval(() => {
+      this.incrementsubText();
+    }, 1500);
   },
   methods:{
+    incrementsubText(){
+      if(this.subTextIndex < 2){
+        this.subTextIndex += 1;
+      }else{
+        this.subTextIndex = 0;
+      }
+    },
+
     scrollToAbout(){
-      // alert("hello");
       scrollToElement('#about');
     }
    
@@ -150,16 +189,17 @@ export default {
       margin-top: 2%; 
       
       button{
-        width: 25%;
+        outline: none;
+        width: 200px;
         height: 80px;
         text-align: center;
         margin: 0 auto;
         background: transparent;
         color: White;
-        border-width: 2px;  
+        border-width: 4px;  
         border-style: solid;
         border-color: $primary;
-        font-size: 100%;
+        font-size: 20px;
         font-family: 'Poppins', sans-serif;
         margin-bottom: 150px;
         margin-top: 50px;
@@ -175,6 +215,7 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-content: center;
     }
 
     .about{
