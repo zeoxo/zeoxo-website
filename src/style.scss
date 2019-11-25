@@ -1,0 +1,73 @@
+// colors
+$primary: #FF073A;
+$dark: #272727;
+$medium: #3a3a3a;
+$medium-light: #979797;
+$light: #FFFFFF;
+
+
+html{ 
+    background-color: $dark;
+}
+
+.titleText{
+    font-family: 'Monoton', cursive;
+    font-size: 300%;
+    margin: 0;
+  }
+
+.header1{
+  font-family: "optician-sans";
+  font-size: 250%;
+  margin: 0;
+  padding: 0;
+}
+.underline{
+  text-decoration: underline;
+}
+
+  .bodyText{
+    font-family:  'Poppins', sans-serif;
+    font-size: 120%;
+  }
+  .indented{
+    padding-left: 2%;
+  }
+
+  .vl{
+    border-left: 2px solid $primary;
+    height: 25px;  
+  }
+
+
+// color classes
+.light{
+  color:  $light;
+}
+
+.dark{
+  color: $dark;
+}
+
+.primary{
+  color: $primary;
+}
+
+.med{
+  color: $medium;
+}
+
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lalezar&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@font-face{
+    font-family: "Optician-Sans";
+    src: url("~@/assets/fonts/Optician-Sans.woff2");
+}
+
+// 'Monoton', cursive;
+// 'Lalezar', cursive;
+// font-family: 'Poppins', sans-serif;
