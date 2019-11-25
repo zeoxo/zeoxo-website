@@ -44,7 +44,7 @@ export default {
     margin:0 auto;
     top:0;
     left: 0;
-    background-image: url("./assets/images/background.png");
+    // background-image: url("./assets/images/background.png");
     background-size: 75%;
     opacity: .75;
   }

@@ -11,6 +11,7 @@
     "core-js": "^3.3.2",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
+    "scroll-to-element": "^2.0.3",
     "vue": "^2.6.10"
   },
   "devDependencies": {
