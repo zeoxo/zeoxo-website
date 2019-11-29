@@ -17,11 +17,19 @@ html{
   }
 
 .header1{
-  font-family: "optician-sans";
+  font-family: "Nasalization";
   font-size: 250%;
   margin: 0;
   padding: 0;
 }
+
+.header2{
+  font-family: 'Optician-Sans';
+  font-size: 250%;
+  margin: 0;
+  padding: 0;
+}
+
 .underline{
   text-decoration: underline;
 }
@@ -70,6 +78,11 @@ html{
 @font-face{
     font-family: "Optician-Sans";
     src: url("~@/assets/fonts/Optician-Sans.woff2");
+}
+
+@font-face{
+  font-family: "Nasalization";
+  src: url("~@/assets/fonts/nasalization-rg.ttf");
 }
 
 // 'Monoton', cursive;

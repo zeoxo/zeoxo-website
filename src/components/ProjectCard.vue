@@ -1,8 +1,8 @@
 <template>
   <div class="main">
-      <a class="card" :href="url">
+      <a class="card" :href="url" :class="{ 'ismobile':isMobile }">
         <img :src="img" alt="Project Image">
-        <p class="text header1">{{title}}</p>    
+        <p class="text header2">{{title}}</p>    
         <p class="type bodyText">{{type}}</p>
         <p class="year bodyText">{{year}}</p>
       </a>
@@ -27,7 +27,8 @@ props:{
     img: String,
     title: String,
     type: String,
-    year: String
+    year: String,
+    isMobile: Boolean
 },
 }
 </script>
@@ -62,7 +63,7 @@ img{
   transition: opacity 0.5s, color 0.5s;
 }
 
-a:hover{
+a:hover, .ismobile{
   .text{
     color:$primary;
     opacity: 1;

@@ -1,24 +1,59 @@
 <template>
   <div id="app">
-    <div class="bg"></div>
     <div class="nav">
-      <navBar class="navBar"/>     
+      <navBar class="navBar" :isMobile="isMobile"/>     
     </div>
-    <Landing class="landing"/>
+    <Landing :style="fullHeight" class="landing" :isMobile="isMobile"/>
+    <Home :isMobile="isMobile"/>
   </div>
 </template>
 
 <script>
+import Home from './views/Home.vue';
 import Landing from './views/Landing.vue';
 import NavBar from './components/NavBar.vue';
 export default {
   name: 'app',
   components: {
+    Home,
     Landing,
     NavBar
   },
   data(){
     return{
+      window: {
+        width: 0,
+        height: 0
+      },
+      isMobile: false
+    }
+  },
+  created(){
+  // const self = this;
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize)
+  },  
+  methods:{
+    handleResize() {
+      this.window.width = window.innerWidth;
+      this.window.height = window.innerHeight;
+/* eslint-disable no-console */
+
+      if(this.window.width < 600){
+        this.isMobile = true;
+      }else{
+        this.isMobile = false;
+      }
+    }, 
+  },
+  computed: {
+    fullHeight () {
+      return{
+        height: this.window.height+'px'
+      }
     }
   },
 }
@@ -33,26 +68,19 @@ export default {
 
   .navBar{
     margin: 0 auto;
-    margin-top: 30px;
-    width: 75%;
-  }
-  .bg{
-    position: fixed;
     width: 100%;
-    height: 100%;
-    z-index: -100;
-    margin:0 auto;
-    top:0;
-    left: 0;
-    // background-image: url("./assets/images/background.png");
-    background-size: 75%;
-    opacity: .75;
+    z-index: 1000;
+    background: $dark;
   }
 
   .app{
     width: 100%;
     padding: 0;
     margin: 0;
+  }
+
+  .landing{
+    // height: 1000px;
   }
 
 </style>

@@ -7,19 +7,11 @@
     <div class="right">
 
       <!-- if on desktop -->
-        <div class="linksDesktop" v-if="window.width > 600">
+        <div class="linksDesktop" :class="{ 'linksMobile':isMobile }">
             <a @click="scrollToAbout">About</a>
             <a @click="scrollToSkills">Skills</a>
             <a @click="scrollToProjects">Projects</a>
             <div class="vl"></div>
-            <a @click="scrollToContact">Contact</a>
-        </div>
-
-        <!-- mobile -->
-        <div class="linksMobile" v-if="window.width < 600">
-           <a @click="scrollToAbout">About</a>
-            <a @click="scrollToSkills">Skills</a>
-            <a @click="scrollToProjects">Projects</a>
             <a @click="scrollToContact">Contact</a>
         </div>
     </div>
@@ -36,27 +28,14 @@ export default {
   components: {
 
 },
+props:{
+  isMobile: Boolean
+},
 data(){
   return{
-    window:{
-      width: 0,
-      height: 0
-    }
   }
 },  
-  created(){
-  // const self = this;
-    window.addEventListener('resize', this.handleResize)
-    this.handleResize();
-  },
-  destroyed() {
-    window.removeEventListener('resize', this.handleResize)
-  },
   methods:{
-    handleResize() {
-      this.window.width = window.innerWidth;
-      this.window.height = window.innerHeight;
-    },
     scrollToAbout(){
       scrollToElement('#about');
     },
@@ -80,6 +59,10 @@ data(){
   @import '../style.scss';
 
     .main{
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
         display: flex;
         justify-content: space-between;
     }
