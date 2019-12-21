@@ -7,13 +7,17 @@
     <div class="right">
 
       <!-- if on desktop -->
-        <div class="linksDesktop" :class="{ 'linksMobile':isMobile }">
+        <div class="linksDesktop" v-if="!isMobile" :class="{ 'linksMobile':isMobile }">
             <a @click="scrollToAbout">About</a>
             <a @click="scrollToSkills">Skills</a>
             <a @click="scrollToProjects">Projects</a>
             <div class="vl"></div>
             <a @click="scrollToContact">Contact</a>
         </div>
+
+      <div class="linksMobile" v-if="isMobile">
+        X
+      </div>
     </div>
 
   </div> 
