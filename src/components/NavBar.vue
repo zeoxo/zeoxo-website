@@ -16,7 +16,7 @@
         </div>
 
       <div class="linksMobile" v-if="isMobile">
-        X
+        
       </div>
     </div>
 

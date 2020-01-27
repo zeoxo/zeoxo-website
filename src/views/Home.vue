@@ -7,13 +7,12 @@
       <div class="aboutMe" :class="{ 'aboutMe-mobile':isMobile }">
         <img src="https://media.licdn.com/dms/image/C4E03AQFSRVHnLJZ1Cw/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=985W4dZuXHvMttXCAVYh6lBh_8Yx8kHCnqkhiMZ0580" alt="me">
         <p class="bodyText med">
-          Hi, My name is Dylan Dougherty, and I love creating things for people to enjoy. When I was a kid my friends and I would film small movies and show them to friends and family.
-          We would spend our summers off from scrool writing, filming, and editing these short films simply for the fun of it. Today, I apply that same love of creating to games.
+          Hi, My name is Dylan Dougherty, and I love creating things! Scroll down to see some of my past projects, and a peak at what im working on next!
         </p> 
   
       </div>
     </div>
-      <div class="titleText primary" id="skills" style="padding-top: 50px;">&lt; Skills &gt;</div>
+      <div class="titleText primary" id="skills" style="padding-top: 120px;">&lt; Skills &gt;</div>
       <div class="skills" style= "width: 65%; margin: 0 auto;">
         <div class="code" style="text-align: left;">
           <p class="header1 dark">Coding</p>
@@ -23,7 +22,7 @@
         </div>  
         <div class="art" style="text-align: left;">
           <p class="header1 dark">Art</p>
-          <p class="bodyText med">I am self trained in graphic design and web design practices. I use my skills to develop small art pieces, logos, and website. 
+          <p class="bodyText med">I am self trained in graphic design and web design practices. I use my skills to develop small art pieces, logos, and websites. 
             I also have experience with ceramic art and specialize in wheel thrown pieces.   </p>
         </div>  
       </div>  
@@ -35,12 +34,16 @@
       <p class="titleText primary " style="padding-top: 50px; padding-bottom: 100px;">&lt; Projects &gt;</p>
       <p class="header2 light">Software</p>
       <div class="projectCards">
-        <ProjectCard class="card" url="https://apps.apple.com/us/app/flyta/id1478797241?ls=1" img="https://i.ibb.co/fMv4y0J/flyta.gif" title="FLYTA" type="mobile game" year="2019"  :isMobile="isMobile"/>
+        <ProjectCard class="card" url="https://zeoxo.com" img="https://i.ibb.co/LdfQDDZ/coastal.gif" title="COASTAL" type="WIP Game" year="TBD"  :isMobile="isMobile"/>
+        <ProjectCard class="card" url="https://flytagame.com" img="https://i.ibb.co/fMv4y0J/flyta.gif" title="FLYTA" type="mobile game" year="2019"  :isMobile="isMobile"/>
         <ProjectCard class="card" url="https://socialstudy.app/" img="https://i.ibb.co/MkCzmMH/social-Study.gif" title="Social Study" type="web app" year="2019" :isMobile="isMobile"/>
         <!-- <ProjectCard class="card" url="https://google.com" img="https://i.stack.imgur.com/XW25s.jpg" title="Coffé" type="mobile app" year ="2018" :isMobile="isMobile"/>    -->
         <ProjectCard class="card" url="https://zeoxo.itch.io/slap-fight" img="https://i.ibb.co/LCtrGcY/slap-Fight.gif" title="slap Fight!" type="jam game" year="2017" :isMobile="isMobile"/>        
         <ProjectCard class="card" url="https://zeoxo.itch.io/the-ninth-circle" img="https://i.ibb.co/W3v2yf8/ninth-Circle.gif" title="Ninth Circle" type="jam game" year="2016" :isMobile="isMobile"/>
         <ProjectCard class="card" url="https://zeoxo.itch.io/paper-or-plastic" img="https://i.ibb.co/Jyb00yQ/paperorplastic.gif" title="Paper or Plastic" type="iOS game" year="2016" :isMobile="isMobile"/>
+        <ProjectCard class="card" url="https://zeoxo.github.io/Table-Games/" img="https://zeoxo.github.io/Table-Games/images/table3.png" title="Table Games" type="Computer Vision Experiment" year="2019" :isMobile="isMobile"/>
+        <ProjectCard class="card" url="https://zeoxo.github.io/Another-Place/" img="https://i.ibb.co/JkQg4F4/Another-Place.png" title="Another Place" type="Web AR Experiment" year="2019" :isMobile="isMobile"/>
+
       </div>
 
         <p class="header2 light" style="padding-bottom: 30px;  padding-top: 80px;">Art</p>
