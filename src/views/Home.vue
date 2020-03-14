@@ -5,9 +5,8 @@
     <div class="about" style="padding-top: 70px;">
       <p class="titleText primary">&lt; About &gt;</p>
       <div class="aboutMe" :class="{ 'aboutMe-mobile':isMobile }">
-        <img src="https://media.licdn.com/dms/image/C4E03AQFSRVHnLJZ1Cw/profile-displayphoto-shrink_200_200/0?e=1580342400&v=beta&t=985W4dZuXHvMttXCAVYh6lBh_8Yx8kHCnqkhiMZ0580" alt="me">
         <p class="bodyText med">
-          Hi, My name is Dylan Dougherty, and I love creating things! Scroll down to see some of my past projects, and a peak at what im working on next!
+          Hi, My name is Dylan Dougherty, and I love creating things! Below is a collection of things I've worked on. Take a look!
         </p> 
   
       </div>
@@ -17,7 +16,7 @@
         <div class="code" style="text-align: left;">
           <p class="header1 dark">Coding</p>
           <p class="bodyText med">I have exensive experience with many languages including javscript, C#, C++, Java, and Python. For the last few years I have
-            dedicated most of my time to C# and the Unity Game engine.
+            dedicated most of my time to web tech, C#, and the Unity Game engine.
           </p>
         </div>  
         <div class="art" style="text-align: left;">
@@ -64,11 +63,8 @@
     </div>
     
     <!-- CONTACT  -->
-    <p class="titleText primary contact-container" id="contact">&lt; Contact &gt;</p>
-    <div class="contact">
-      <div class="form">
-        <!-- <ContactForm/> -->
-      </div>
+    <div class="contact" id="contact">
+      <p class="titleText primary " style="width: 100%; padding-top: 60px; padding-bottom:50px;">&lt; Contact &gt;</p>
       <div class="icons">
         <div class="email">
           <img src="../assets/svg/email.svg" alt="email" class="emailSVG">

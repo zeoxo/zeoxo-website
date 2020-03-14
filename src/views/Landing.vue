@@ -2,7 +2,7 @@
   <div class="main">
     <div class="intro">
 
-      <p class="header2 med-light" style="padding-top: 70px;">{{hello}}</p>
+      <p class="header2 med-light" style="padding-top: 100px;">{{hello}}</p>
       <div style="vertical-align:middle; padding-top: 10px;">
       <div class="name">
         <p class="header1 light" style="display: inline;  font-size: 650%;">I am </p>
