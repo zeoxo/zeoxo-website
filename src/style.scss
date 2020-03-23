@@ -69,6 +69,10 @@ html{
   color: $medium-light;
 }
 
+a{
+  text-decoration: none;
+  color: $primary;
+}
 
 // fonts
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');

@@ -6,22 +6,62 @@
       <p class="titleText primary">&lt; About &gt;</p>
       <div class="aboutMe" :class="{ 'aboutMe-mobile':isMobile }">
         <p class="bodyText med">
-          Hi, My name is Dylan Dougherty, and I love creating things! Below is a collection of things I've worked on. Take a look!
+          My name is Dylan Dougherty, better known online as zeoxo. I am a passionate web and game developer who loves creating interative experiences for all to enjoy. I currently hold a B.S. in Information Technology, and a minor in web development from from <a target="_blank" href="https://www.kutztown.edu/"> Kutztown University</a> that I earned in 2019. Scroll down to take a look at some of my past projects, and what im currently working on!
         </p> 
   
       </div>
     </div>
-      <div class="titleText primary" id="skills" style="padding-top: 120px;">&lt; Skills &gt;</div>
+      <div class="titleText primary" id="skills" style="padding-top: 120px;">&lt; Skills / Experience &gt;</div>
       <div class="skills" style= "width: 65%; margin: 0 auto;">
         <div class="code" style="text-align: left;">
-          <p class="header1 dark">Coding</p>
-          <p class="bodyText med">I have exensive experience with many languages including javscript, C#, C++, Java, and Python. For the last few years I have
-            dedicated most of my time to web tech, C#, and the Unity Game engine.
+          <p class="header1 light">Development</p>
+          <p class="bodyText light">
+            Development is one of my biggest passions. Throughout both my academic career at <a target="_blank" href="https://www.kutztown.edu/"> Kutztown University</a>, 
+            and my own personal endevours, I have dived into a variety of languages and tools.
           </p>
+          <div class="skillCards">
+            <SkillCard class="skillCard" title="HTML"/>
+            <SkillCard class="skillCard" title="CSS"/>
+            <SkillCard class="skillCard" title="JavaScript"/>
+            <SkillCard class="skillCard" title="C++"/>
+            <SkillCard class="skillCard" title="C#"/>
+            <SkillCard class="skillCard" title="React"/>
+            <SkillCard class="skillCard" title="React Native"/>
+            <SkillCard class="skillCard" title="Vue"/>
+            <SkillCard class="skillCard" title="Unity"/>
+            <SkillCard class="skillCard" title="Game Maker"/>
+            <SkillCard class="skillCard" title="Python"/>
+            <SkillCard class="skillCard" title="Java"/>
+            <SkillCard class="skillCard" title="Ionic"/>
+            <SkillCard class="skillCard" title="VueX"/>
+            <SkillCard class="skillCard" title="JSON"/>
+            <SkillCard class="skillCard" title="Firebase"/>
+            <SkillCard class="skillCard" title="NativeScript"/>
+            <SkillCard class="skillCard" title="Git"/>
+            <SkillCard class="skillCard" title="NPM"/>
+            <SkillCard class="skillCard" title="Database Design"/>
+            <SkillCard class="skillCard" title="PHP"/>
+            <SkillCard class="skillCard" title="SQL"/>
+            <SkillCard class="skillCard" title="WEB VR"/>
+            <SkillCard class="skillCard" title="SQL"/>
+            <SkillCard class="skillCard" title="SQL"/>
+            <SkillCard class="skillCard" title="Processing"/>
+            <SkillCard class="skillCard" title="Computer Vision"/>
+            <SkillCard class="skillCard" title="VR"/>
+            <SkillCard class="skillCard" title="A-Frame"/>
+            <SkillCard class="skillCard" title="Express"/>
+            <SkillCard class="skillCard" title="Node"/>
+            <SkillCard class="skillCard" title="XCode"/>
+
+
+
+
+            
+          </div>
         </div>  
-        <div class="art" style="text-align: left;">
-          <p class="header1 dark">Art</p>
-          <p class="bodyText med">I am self trained in graphic design and web design practices. I use my skills to develop small art pieces, logos, and websites. 
+        <div class="Design" style="text-align: left;">
+          <p class="header1 light">Design</p>
+          <p class="bodyText light">I am self trained in graphic design and web design practices. I use my skills to develop small art pieces, logos, and websites. 
             I also have experience with ceramic art and specialize in wheel thrown pieces.   </p>
         </div>  
       </div>  
@@ -36,7 +76,6 @@
         <ProjectCard class="card" url="https://zeoxo.com" img="https://i.ibb.co/LdfQDDZ/coastal.gif" title="COASTAL" type="WIP Game" year="TBD"  :isMobile="isMobile"/>
         <ProjectCard class="card" url="https://flytagame.com" img="https://i.ibb.co/fMv4y0J/flyta.gif" title="FLYTA" type="mobile game" year="2019"  :isMobile="isMobile"/>
         <ProjectCard class="card" url="https://socialstudy.app/" img="https://i.ibb.co/MkCzmMH/social-Study.gif" title="Social Study" type="web app" year="2019" :isMobile="isMobile"/>
-        <!-- <ProjectCard class="card" url="https://google.com" img="https://i.stack.imgur.com/XW25s.jpg" title="Coffé" type="mobile app" year ="2018" :isMobile="isMobile"/>    -->
         <ProjectCard class="card" url="https://zeoxo.itch.io/slap-fight" img="https://i.ibb.co/LCtrGcY/slap-Fight.gif" title="slap Fight!" type="jam game" year="2017" :isMobile="isMobile"/>        
         <ProjectCard class="card" url="https://zeoxo.itch.io/the-ninth-circle" img="https://i.ibb.co/W3v2yf8/ninth-Circle.gif" title="Ninth Circle" type="jam game" year="2016" :isMobile="isMobile"/>
         <ProjectCard class="card" url="https://zeoxo.itch.io/paper-or-plastic" img="https://i.ibb.co/Jyb00yQ/paperorplastic.gif" title="Paper or Plastic" type="iOS game" year="2016" :isMobile="isMobile"/>
@@ -113,6 +152,7 @@
 
 <script>
 import ProjectCard from "../components/ProjectCard.vue";
+import SkillCard from '../components/SkillCard'
 // import ContactForm from "../components/ContactForm.vue"
 var scrollToElement = require('scroll-to-element');
 export default {
@@ -127,6 +167,7 @@ export default {
   },
   components: {
     ProjectCard,
+    SkillCard,
     // ContactForm
   },
   mounted(){
@@ -234,7 +275,7 @@ export default {
   }
 
 .aboutContainer{
-  background: $light;
+  background: $dark;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -318,6 +359,14 @@ export default {
     transform: scale(1.5);
     fill: $primary;
   }
+}
+
+.skillCards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 </style>

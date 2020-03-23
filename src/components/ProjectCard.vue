@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-      <a class="card" :href="url" :class="{ 'ismobile':isMobile }">
+      <a class="card" target="_blank" :href="url" :class="{ 'ismobile':isMobile }">
         <img :src="img" alt="Project Image">
         <p class="text header2">{{title}}</p>    
         <p class="type bodyText">{{type}}</p>
