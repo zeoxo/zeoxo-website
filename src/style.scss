@@ -8,26 +8,44 @@ $light: #FFFFFF;
 
 html{ 
     background-color: $dark;
+    font-size: 120%;
+    font-family:  'Poppins', sans-serif;
+}
+
+hr{
+  width: 100%;
 }
 
 .titleText{
     font-family: 'Monoton', cursive;
-    font-size: 300%;
+    font-size: 250%;
     margin: 0;
   }
 
 .header1{
-  font-family: "Nasalization";
-  font-size: 250%;
+  font-family: "Optician-sans";
+  font-size: 260%;
   margin: 0;
   padding: 0;
 }
 
 .header2{
   font-family: 'Optician-Sans';
-  font-size: 250%;
+  font-size: 240%;
   margin: 0;
   padding: 0;
+}
+.header3{
+  font-family: 'Optician-Sans';
+  font-size: 160%;
+  margin: 0;
+  padding: 0;
+}
+
+.list{
+  font-family: 'Poppins', sans-serif;
+  font-size: 110%;
+  list-style-type: square;
 }
 
 .underline{
@@ -36,7 +54,7 @@ html{
 
   .bodyText{
     font-family:  'Poppins', sans-serif;
-    font-size: 120%;
+    font-size: 110%;
   }
   .indented{
     padding-left: 2%;

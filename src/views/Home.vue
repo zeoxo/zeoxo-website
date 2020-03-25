@@ -6,15 +6,28 @@
       <p class="titleText primary">&lt; About &gt;</p>
       <div class="aboutMe" :class="{ 'aboutMe-mobile':isMobile }">
         <p class="bodyText med">
-          My name is Dylan Dougherty, better known online as zeoxo. I am a passionate web and game developer who loves creating interative experiences for all to enjoy. I currently hold a B.S. in Information Technology, and a minor in web development from from <a target="_blank" href="https://www.kutztown.edu/"> Kutztown University</a> that I earned in 2019. Scroll down to take a look at some of my past projects, and what im currently working on!
+          My name is Dylan Dougherty, better known online as zeoxo. I am a passionate web and game developer who loves creating interative experiences for all to enjoy. Scroll down to take a look at some of my past projects, and what im currently working on!
         </p> 
   
       </div>
     </div>
       <div class="titleText primary" id="skills" style="padding-top: 120px;">&lt; Skills / Experience &gt;</div>
       <div class="skills" style= "width: 65%; margin: 0 auto;">
+        <div class="education" style="text-align: left;">
+          <p class="header1 primary">Education</p>
+          <hr style="margin-bottom: 30px;">
+            <a class="header3" target="_blank" href="https://www.kutztown.edu/"> Kutztown University</a>
+            <ul class="list light">
+              <li>Major: B.S. Information Technology</li>
+              <li>Minor: Web Development</li>
+              <li>Member of the National Honors Society For Leadership and Success</li>
+              <li>Dean’s list Spring 2019</li>
+              <li>Senior Project adopted by univerity for internal use</li>
+            </ul>
+        </div>
         <div class="code" style="text-align: left;">
-          <p class="header1 light">Development</p>
+          <p class="header1 primary">Dev</p>
+          <hr>
           <p class="bodyText light">
             Development is one of my biggest passions. Throughout both my academic career at <a target="_blank" href="https://www.kutztown.edu/"> Kutztown University</a>, 
             and my own personal endevours, I have dived into a variety of languages and tools.
@@ -51,18 +64,23 @@
             <SkillCard class="skillCard" title="A-Frame"/>
             <SkillCard class="skillCard" title="Express"/>
             <SkillCard class="skillCard" title="Node"/>
-            <SkillCard class="skillCard" title="XCode"/>
-
-
-
-
-            
+            <SkillCard class="skillCard" title="XCode"/> 
           </div>
         </div>  
         <div class="Design" style="text-align: left;">
-          <p class="header1 light">Design</p>
+          <p class="header1 primary">Design</p>
+          <hr>
           <p class="bodyText light">I am self trained in graphic design and web design practices. I use my skills to develop small art pieces, logos, and websites. 
-            I also have experience with ceramic art and specialize in wheel thrown pieces.   </p>
+            I also have experience with ceramic art and specialize in wheel thrown pieces.
+          </p>
+          <div class="skillCards">
+            <SkillCard class="skillCard" title="Afinity Photo"/> 
+            <SkillCard class="skillCard" title="Afinity Designer"/>
+            <SkillCard class="skillCard" title="web design"/>
+            <SkillCard class="skillCard" title="Figma"/> 
+            <SkillCard class="skillCard" title="Logo Design"/> 
+            <SkillCard class="skillCard" title="UI Design"/>
+          </div>
         </div>  
       </div>  
     </div>
@@ -79,7 +97,7 @@
         <ProjectCard class="card" url="https://zeoxo.itch.io/slap-fight" img="https://i.ibb.co/LCtrGcY/slap-Fight.gif" title="slap Fight!" type="jam game" year="2017" :isMobile="isMobile"/>        
         <ProjectCard class="card" url="https://zeoxo.itch.io/the-ninth-circle" img="https://i.ibb.co/W3v2yf8/ninth-Circle.gif" title="Ninth Circle" type="jam game" year="2016" :isMobile="isMobile"/>
         <ProjectCard class="card" url="https://zeoxo.itch.io/paper-or-plastic" img="https://i.ibb.co/Jyb00yQ/paperorplastic.gif" title="Paper or Plastic" type="iOS game" year="2016" :isMobile="isMobile"/>
-        <ProjectCard class="card" url="https://zeoxo.github.io/Table-Games/" img="https://zeoxo.github.io/Table-Games/images/table3.png" title="Table Games" type="Computer Vision Experiment" year="2019" :isMobile="isMobile"/>
+        <ProjectCard class="card" url="https://zeoxo.github.io/Table-Games/" img="https://zeoxo.github.io/Table-Games/images/table3.png" title="Table Games" type="computer vision experiment" year="2019" :isMobile="isMobile"/>
         <ProjectCard class="card" url="https://zeoxo.github.io/Another-Place/" img="https://i.ibb.co/JkQg4F4/Another-Place.png" title="Another Place" type="Web AR Experiment" year="2019" :isMobile="isMobile"/>
 
       </div>

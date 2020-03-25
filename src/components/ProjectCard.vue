@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div id="card">
       <a class="card" target="_blank" :href="url" :class="{ 'ismobile':isMobile }">
         <img :src="img" alt="Project Image">
         <p class="text header2">{{title}}</p>    
@@ -37,12 +37,16 @@ props:{
 <style lang="scss" scoped>
   @import '../style.scss';
 
-.main{
+#card{
     margin-left: 10px;
     margin-right: 10px;
     position: relative;
     width: 400px;
     height: 200px;
+}
+
+hr{
+  width: 100%;
 }
 
 img{
