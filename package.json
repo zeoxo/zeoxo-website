@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "firebase": "^7.12.0",
+    "firebase": "^7.13.1",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "scroll-to-element": "^2.0.3",

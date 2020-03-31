@@ -5,7 +5,7 @@
     <div class="about" style="padding-top: 70px;">
       <p class="titleText primary">&lt; About &gt;</p>
       <div class="aboutMe" :class="{ 'aboutMe-mobile':isMobile }">
-        <p class="bodyText med">
+        <p class="bodyText dark">
           My name is Dylan Dougherty, better known online as zeoxo. I am a passionate web and game developer who loves creating interative experiences for all to enjoy. Scroll down to take a look at some of my past projects, and what im currently working on!
         </p> 
   
@@ -218,7 +218,7 @@ export default {
       margin-top: 2%; 
     }
     .about{
-      background:white;
+      background:$light;
       width: 100%;
       margin: 0 auto;
 
@@ -245,6 +245,7 @@ export default {
         }
       }
       .aboutMe-mobile {
+        
                 display: flex;
                 margin: 0 auto;
                 flex-wrap: wrap;
